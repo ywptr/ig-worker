@@ -7,6 +7,9 @@ dependencies = [
     "ig-backend @ git+https://github.com/ywptr/ig.git@main",
 ]
 
+[tool.vercel]
+entrypoint = "main:app"
+
 [[tool.vercel.subscribers]]
 entrypoint = "worker"
 topics = ["ig-jobs"]

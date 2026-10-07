@@ -4,8 +4,6 @@ from typing import Any
 from vercel.queue import subscribe
 
 from app.core.logging import configure_logging
-from app.jobs.worker import execute_job
-
 
 configure_logging()
 
@@ -20,6 +18,7 @@ logger = logging.getLogger(__name__)
 async def process_job(
     message: dict[str, Any],
 ) -> None:
+    from app.jobs.worker import execute_job
     logger.info(
         "queue.message.received message=%s",
         message,
@@ -31,7 +30,7 @@ async def process_job(
         "queue.job.execute.start job_id=%s",
         job_id,
     )
-
+    
     execute_job(job_id)
 
     logger.info(

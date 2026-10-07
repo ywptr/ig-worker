@@ -1,0 +1,12 @@
+[project]
+name = "ig-worker"
+version = "0.1.0"
+requires-python = ">=3.13,<3.15"
+
+dependencies = [
+    "ig-backend @ git+https://github.com/ywptr/ig.git@main",
+]
+
+[[tool.vercel.subscribers]]
+entrypoint = "worker"
+topics = ["ig-jobs"]

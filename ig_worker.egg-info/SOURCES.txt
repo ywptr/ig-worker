@@ -1,0 +1,7 @@
+pyproject.toml
+worker.py
+ig_worker.egg-info/PKG-INFO
+ig_worker.egg-info/SOURCES.txt
+ig_worker.egg-info/dependency_links.txt
+ig_worker.egg-info/requires.txt
+ig_worker.egg-info/top_level.txt
